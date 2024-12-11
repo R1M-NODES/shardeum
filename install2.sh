@@ -453,6 +453,8 @@ if [ "$CHANGEPASSWORD" = "y" ]; then
     else
         valid_pass=true
         echo "\nPassword set successfully."
+    fi
+  done
 
   # Hash the password using the fallback mechanism
   DASHPASS=$(hash_password "$DASHPASS")

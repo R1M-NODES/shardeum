@@ -456,7 +456,6 @@ if [ "$CHANGEPASSWORD" = "y" ]; then
     fi
   done
 
-  # Hash the password using the fallback mechanism
   DASHPASS=$(hash_password "$DASHPASS")
 else
   DASHPASS=$PREVIOUS_PASSWORD

@@ -456,6 +456,7 @@ if [ "$CHANGEPASSWORD" = "y" ]; then
     fi
   done
 
+if [ -n "$DASHPASS" ]; then
   DASHPASS=$(hash_password "$DASHPASS")
 else
   DASHPASS=$PREVIOUS_PASSWORD
@@ -470,7 +471,6 @@ if [ -z "$DASHPASS" ]; then
 fi
 
 echo # New line after inputs.
-# echo "Password saved as:" $DASHPASS #DEBUG: TEST PASSWORD WAS RECORDED AFTER ENTERED.
 
 while :; do
   read -p "Enter the port (1025-65536) to access the web based Dashboard (default $DASHPORT_DEFAULT): " DASHPORT

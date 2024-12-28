@@ -3,7 +3,7 @@
 while true; do
   #run
   date=$(date '+%Y/%m/%d %H:%M:%S')
-  container_name="shardeum-dashboard"
+  container_name="shardeum-validator"
   status=$(docker exec -it $container_name operator-cli status | awk '/state:/ {print $NF}' 2>/dev/null)
   
   if [[ -z "$status" ]]; then
